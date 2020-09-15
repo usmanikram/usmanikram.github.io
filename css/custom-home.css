@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'tahuregular';
+  src: url('fonts/tahu/tahu-webfont.woff2') format('woff2'),
+       url('fonts/tahu/tahu-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'agneregular';
+  src: url('fonts/agne/agne-regular-webfont.woff2') format('woff2'),
+       url('fonts/agne/agne-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color:#EDF5E1;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #05386B;
+    display: block;
+    transition: 0.3s;
+    font-weight: 500;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #c5dbce;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+/*
+  body {
+    background-color: #5CDB95;
+    color:#EDF5E1;
+  }
+*/
+@keyframes home-bg {
+  0% {background-color: #cf2727;}
+  25% {background-color:#e7d90e;}
+  50%{background-color: #5CDB95;}
+  75%{background-color:#b8099b;}
+  100%{background-color:#134bb3;}
+}
+
+
+body {
+  -webkit-animation: home-bg 20s infinite;
+  animation: home-bg 15s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+
+  /*animation: myanimation 15s infinite;*/
+  color:#EDF5E1;
+}
+  main {
+    height: 100vh;
+  }
+  
+  .btn-bg {
+    background-color: #EDF5E1; 
+  }
+
+  .greeting 
+  {
+    font-family: 'tahuregular',Arial, sans-serif;
+    font-size: 150px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .headline 
+  {
+    font-family: 'agneregular',Arial, sans-serif;
+    font-size: 50px;
+  }
+
+  .caption 
+  {
+    font-family: 'agneregular',Arial, sans-serif;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    .greeting {
+      font-size: 75px;
+    }
+    .headline {
+      font-size: 25px;
+    }
+
+  }
